@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Tichi Web Application - Login Test Suite"
+       verbose="1"
+       thread-count="1"
+       parallel="none">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="environment" value="stage"/>
+
+    <test name="Login Module - Functional Tests">
+        <classes>
+            <class name="com.tichi.tests.LoginTest">
+                <methods>
+                    <include name="verifyLoginPageLoadsSuccessfully"/>
+                    <include name="verifyEmailFieldIsDisplayed"/>
+                    <include name="verifyContinueButtonIsDisplayed"/>
+                    <include name="verifyContinueWithGoogleButtonIsDisplayed"/>
+                    <include name="verifyValidationMessageForEmptyEmail"/>
+                    <include name="verifyValidationMessageForInvalidEmailFormat"/>
+                    <include name="verifySuccessfulNavigationWithValidEmail"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+</suite>
